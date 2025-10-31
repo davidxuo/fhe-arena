@@ -1,0 +1,181 @@
+.arena-app {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.arena-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.status-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.status-badge.registered {
+  background-color: #d1fae5;
+  color: #047857;
+}
+
+.status-badge.unregistered {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.info-text {
+  margin-top: 0.75rem;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.error-text {
+  margin-top: 0.75rem;
+  color: #b91c1c;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.info-card h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #111827;
+}
+
+.info-line {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.cipher-text {
+  font-family: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #1f2937;
+  padding: 0.5rem 0.75rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  word-break: break-all;
+}
+
+.decrypted-summary {
+  padding: 0.75rem 1rem;
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.primary-button,
+.secondary-button,
+.outline-button {
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+.primary-button:disabled {
+  background: #cbd5f5;
+  color: #ffffff;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  background-color: #111827;
+  color: #ffffff;
+}
+
+.secondary-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.outline-button {
+  background-color: transparent;
+  color: #1f2937;
+  border: 1px solid rgba(17, 24, 39, 0.15);
+}
+
+.primary-button:not(:disabled):hover,
+.secondary-button:not(:disabled):hover,
+.outline-button:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.08);
+}
+
+.input-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.number-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  font-size: 1rem;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.number-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+@media (max-width: 640px) {
+  .arena-main {
+    padding: 2rem 1rem 2.5rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+}
